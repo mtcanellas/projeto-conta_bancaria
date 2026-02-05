@@ -1,11 +1,13 @@
 import readlinesync = require("readline-sync");
-import { colors } from "./src/Util/Color";
+import { colors } from "./src/util/Color";
+import { Conta } from "./src/model/Conta";
 
 export function main() {
 
     let opcao: number;
+// instanciar objetos da classe conta
 
-    while (true) {
+ const c1 = new Conta (1, 1234,"Sofia", 1 , 10000.00);
 
         console.log("*****************************************************");
         console.log("                                                     ");
@@ -74,8 +76,8 @@ export function main() {
                 break;
         }
     }
+ 
 
-}
 
 /* Função com os dados da pessoa desenvolvedora */
 
