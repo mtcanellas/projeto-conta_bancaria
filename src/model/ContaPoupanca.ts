@@ -12,18 +12,12 @@ private _niver: Number;
 
 
 
-    /**
-     * Getter niver
-     * @return {Number}
-     */
+ 
 	public get niver(): Number {
 		return this._niver;
 	}
 
-    /**
-     * Setter niver
-     * @param {Number} value
-     */
+
 	public set niver(value: Number) {
 		this._niver = value;
 	}
