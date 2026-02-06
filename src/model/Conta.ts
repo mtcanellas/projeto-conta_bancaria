@@ -1,6 +1,7 @@
 import {colors } from "../util/Color";
 
-export class Conta{
+// Uma classe abstrata ela serve para Superclass 
+export  abstract class Conta{
 
     // Atributos da Classe
     private _numero: number;

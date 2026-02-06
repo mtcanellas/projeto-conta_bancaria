@@ -1,6 +1,7 @@
 import { colors } from "./src/util/Color";
 import { Conta } from "./src/model/Conta";
 import { Input } from "./src/util/Input";
+import { ContaCorrente } from "./src/model/ContaCorrente";
 
 export function main() {
 
@@ -8,32 +9,45 @@ export function main() {
 
     // Instanciar Objetos da Classe Conta
 
-    const c1 = new Conta(1, 1234, "Sofia", 1, 100000.00);
+    const cc1 = new ContaCorrente(1, 1234, "Sofia", 1, 100000.00 , 2000);
 
-    c1.visualizar();
+    cc1.visualizar();
 
-    // Testes do Método Sacar
-    console.log("Sacar 100,00: ", c1.sacar(100.00));
-    console.log("Sacar 200000.00: ", c1.sacar(200000.00));
-    console.log("Sacar 0.00: ", c1.sacar(0.00));
+    /*
+        // Testes do Método Sacar
+        console.log("Sacar 100,00: ", c1.sacar(100.00));
+        console.log("Sacar 200000.00: ", c1.sacar(200000.00));
+        console.log("Sacar 0.00: ", c1.sacar(0.00)); 
 
-    // Testes do Método Depositar
-    console.log("Depositar -10.00: ");
-    c1.depositar(-10.00);
+        // Testes do Método Depositar
+        console.log("Depositar -10.00: ");
+        c1.depositar(-10.00);
 
-    console.log("Depositar 500.00: ");
-    c1.depositar(500.00);
-
-    c1.visualizar();
+        console.log("Depositar 500.00: ");
+        c1.depositar(500.00);
+         c1.visualizar();
+    */
+   
 
     // console.log("O Titular da Conta é: ", c1.titular);
     // console.log("O Saldo da Conta é: ", c1.saldo);
+    // teste da  Classe Conta Corrente
 
   
+    const cc2 = new ContaCorrente(2,5678, "Roberto", 1 , 20000.00, 2000); // passando os atributos exigente da classe ContaCorrente
+    
+    cc1.visualizar();
+   
+//teste do metodo Sacar - Conta Corrente
+
+    console.log("Sacar 1000,00: ", cc1.sacar(1000.00));
+    console.log("Sacar 20000.00: " , cc1.sacar(20000.00));
+
+
 
     while (true) {
 
-        console.log(colors.bg.blue, colors.fg.black,
+        console.log(colors.bg.blackbright, colors.fg.black,
                     "*****************************************************");
         console.log("                                                     ");
         console.log("                BANCO DO BRAZIL COM Z                ");
