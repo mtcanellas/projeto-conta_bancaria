@@ -1,5 +1,7 @@
 import { Conta } from "./Conta";
-import { colors } from "../util/Color";
+import { Colors } from "../util/Color";
+import { formatarMoeda } from "../util/Currency";
+
 
 
 //CTRL + SHIFT + P pra puxar GET SET E O CONSTRUTOR
@@ -31,17 +33,17 @@ export class ContaCorrente extends Conta{ // CRIANDO A CLASSE CONTA-CORRENTE HER
 	}
 
 
-
+//Método sacar sobrescrito
 
     public sacar(valor: number): boolean {
     
             if(valor <= 0){
-                console.log(colors.fg.red, "O valor deve ser positivo",colors.reset);
+                console.log(Colors.fg.red, "O valor deve ser positivo",Colors.reset);
                 return false;
             }
     
             if(valor > this.saldo + this._limite){
-                console.log(colors.fg.red, "Saldo Insuficiente!",colors.reset);
+                console.log(Colors.fg.red, "Saldo Insuficiente!",Colors.reset);
                 return false;
             }
     
